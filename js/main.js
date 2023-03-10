@@ -47,3 +47,37 @@ let bici = [
   let {nome, peso} = biciLeggera;
   console.log(
   `La ${nome} con il peso di ${peso}Kg è la bici più leggera`)
+
+
+  //Snack2
+
+  let squadra = [
+    {
+        nome: 'roma',
+        punti: 0,
+        falli: 0,
+    },
+    {
+        nome: 'inter',
+        punti: 0,
+        falli: 0,
+    },
+    {
+        nome: 'milan',
+        punti: 0,
+        falli: 0,
+    },
+  ]
+
+  //generiamo i numeri nel posto di punti e falli
+
+  function generaUnNumerCasuale(min, max){
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+
+// Punti fatti e falli subiti
+  for (let i = 0; i < squadra.length; i++){
+    squadra[i].punti = generaUnNumerCasuale(1,30);
+    squadra[i].falli = generaUnNumerCasuale(20,50);
+  }
+console.log(squadra);
