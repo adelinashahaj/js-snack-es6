@@ -81,3 +81,14 @@ let bici = [
     squadra[i].falli = generaUnNumerCasuale(20,50);
   }
 console.log(squadra);
+
+
+//Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+
+let nuovaSquadra = [];
+for (let i = 0; i < squadra.length; i++){
+   let {nome, falli} = squadra[i];
+   nuovaSquadra.push({nome, falli});
+}
+console.log(nuovaSquadra);
